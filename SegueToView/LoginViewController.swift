@@ -15,7 +15,28 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let welcomeVC = segue.destination as! WelcomeViewController
+        welcomeVC.welcome = loginTF.text
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    super.touchesBegan(touches, with: event)
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        
+    }
+    
 
-
+    @IBAction func logInButton(_ sender: Any) {
+    }
+    @IBAction func forgotUserNameButton(_ sender: Any) {
+        
+    }
+    @IBAction func forgotPasswordButton(_ sender: Any) {
+    }
+    
 }
 
