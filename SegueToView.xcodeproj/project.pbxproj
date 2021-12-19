@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4BC2FD276F968800D84810 /* Data User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC2FC276F968800D84810 /* Data User.swift */; };
 		CEC9F757276B0AFF000C5458 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9F756276B0AFF000C5458 /* WelcomeViewController.swift */; };
 		CEFB93AB276A92370017A96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB93AA276A92370017A96E /* AppDelegate.swift */; };
 		CEFB93AD276A92370017A96E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB93AC276A92370017A96E /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE4BC2FC276F968800D84810 /* Data User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data User.swift"; sourceTree = "<group>"; };
 		CEC9F756276B0AFF000C5458 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CEFB93A7276A92370017A96E /* SegueToView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueToView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFB93AA276A92370017A96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4BC2F9276F956B00D84810 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BC2FC276F968800D84810 /* Data User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE4BC2FA276F957E00D84810 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB93B0276A92370017A96E /* Main.storyboard */,
+				CEFB93B5276A923B0017A96E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CE4BC2FB276F95A300D84810 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB93AE276A92370017A96E /* LoginViewController.swift */,
+				CEC9F756276B0AFF000C5458 /* WelcomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CEFB939E276A92370017A96E = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +86,12 @@
 		CEFB93A9276A92370017A96E /* SegueToView */ = {
 			isa = PBXGroup;
 			children = (
+				CE4BC2FB276F95A300D84810 /* Controllers */,
+				CE4BC2FA276F957E00D84810 /* Storyboards */,
+				CE4BC2F9276F956B00D84810 /* Models */,
 				CEFB93AA276A92370017A96E /* AppDelegate.swift */,
 				CEFB93AC276A92370017A96E /* SceneDelegate.swift */,
-				CEFB93AE276A92370017A96E /* LoginViewController.swift */,
-				CEC9F756276B0AFF000C5458 /* WelcomeViewController.swift */,
-				CEFB93B0276A92370017A96E /* Main.storyboard */,
 				CEFB93B3276A923B0017A96E /* Assets.xcassets */,
-				CEFB93B5276A923B0017A96E /* LaunchScreen.storyboard */,
 				CEFB93B8276A923B0017A96E /* Info.plist */,
 			);
 			path = SegueToView;
@@ -144,6 +171,7 @@
 				CEFB93AF276A92370017A96E /* LoginViewController.swift in Sources */,
 				CEC9F757276B0AFF000C5458 /* WelcomeViewController.swift in Sources */,
 				CEFB93AB276A92370017A96E /* AppDelegate.swift in Sources */,
+				CE4BC2FD276F968800D84810 /* Data User.swift in Sources */,
 				CEFB93AD276A92370017A96E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
