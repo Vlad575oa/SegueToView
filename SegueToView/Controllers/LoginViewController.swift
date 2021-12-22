@@ -10,31 +10,42 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+
+    let user = User.getUserData()
+
     
-    private let user = "Vlad"
-    private let password = "1234"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVC = segue.destination as! WelcomeViewController
-        welcomeVC.welcome = loginTF.text
+        guard let tabBarControllers = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarControllers.viewControllers else { return }
+        let welcomeVC = segue.destination as? WelcomeViewController
+        welcomeVC?.login = loginTF.text // не смог понять почему не передается логин
+        guard let imageVC = segue.destination as? ImageViewController else { return }
+        imageVC.ImageLabel = user.person.image
+        
+        viewControllers.forEach {
+            if let VC = $0 as? InfoViewController {
+                VC.infoLabel.text = user.login
+            } else if let VCImage = $0 as? ImageViewController {
+                VCImage.ImageLabel = user.person.image
+            }
+        }
     }
+   
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        
     }
     @IBAction func logInButton(_ sender: Any) {
-        if loginTF.text != "Vlad" {
+        if loginTF.text !=  user.login {
             showAlert(title: "Invalid login", message: "Please enter correct name")
-        } else if passwordTF.text != "1234" {
+        } else if passwordTF.text != user.password {
             showAlert(title: "Invalid password", message: "Please enter correct password")
         }
     }
-    
     @IBAction func forgotUserNameButton(_ sender: Any) {
         showAlert(title: "Invalid login", message: "Please enter name <Vlad>")
     }

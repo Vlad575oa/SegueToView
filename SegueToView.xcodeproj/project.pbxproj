@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE4BC2FD276F968800D84810 /* Data User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC2FC276F968800D84810 /* Data User.swift */; };
 		CEC9F757276B0AFF000C5458 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9F756276B0AFF000C5458 /* WelcomeViewController.swift */; };
+		CEF56D9F2773B29D00A881E4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF56D9E2773B29D00A881E4 /* InfoViewController.swift */; };
+		CEF56DA12773B2C500A881E4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF56DA02773B2C500A881E4 /* ImageViewController.swift */; };
 		CEFB93AB276A92370017A96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB93AA276A92370017A96E /* AppDelegate.swift */; };
 		CEFB93AD276A92370017A96E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB93AC276A92370017A96E /* SceneDelegate.swift */; };
 		CEFB93AF276A92370017A96E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB93AE276A92370017A96E /* LoginViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		CE4BC2FC276F968800D84810 /* Data User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data User.swift"; sourceTree = "<group>"; };
 		CEC9F756276B0AFF000C5458 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CEF56D9E2773B29D00A881E4 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CEF56DA02773B2C500A881E4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		CEFB93A7276A92370017A96E /* SegueToView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueToView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFB93AA276A92370017A96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFB93AC276A92370017A96E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +67,21 @@
 			children = (
 				CEFB93AE276A92370017A96E /* LoginViewController.swift */,
 				CEC9F756276B0AFF000C5458 /* WelcomeViewController.swift */,
+				CEF56D9E2773B29D00A881E4 /* InfoViewController.swift */,
+				CEF56DA02773B2C500A881E4 /* ImageViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEF56D9D2773ADA400A881E4 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB93AA276A92370017A96E /* AppDelegate.swift */,
+				CEFB93AC276A92370017A96E /* SceneDelegate.swift */,
+				CEFB93B3276A923B0017A96E /* Assets.xcassets */,
+				CEFB93B8276A923B0017A96E /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 		CEFB939E276A92370017A96E = {
@@ -89,10 +106,7 @@
 				CE4BC2FB276F95A300D84810 /* Controllers */,
 				CE4BC2FA276F957E00D84810 /* Storyboards */,
 				CE4BC2F9276F956B00D84810 /* Models */,
-				CEFB93AA276A92370017A96E /* AppDelegate.swift */,
-				CEFB93AC276A92370017A96E /* SceneDelegate.swift */,
-				CEFB93B3276A923B0017A96E /* Assets.xcassets */,
-				CEFB93B8276A923B0017A96E /* Info.plist */,
+				CEF56D9D2773ADA400A881E4 /* SupportFiles */,
 			);
 			path = SegueToView;
 			sourceTree = "<group>";
@@ -171,7 +185,9 @@
 				CEFB93AF276A92370017A96E /* LoginViewController.swift in Sources */,
 				CEC9F757276B0AFF000C5458 /* WelcomeViewController.swift in Sources */,
 				CEFB93AB276A92370017A96E /* AppDelegate.swift in Sources */,
+				CEF56DA12773B2C500A881E4 /* ImageViewController.swift in Sources */,
 				CE4BC2FD276F968800D84810 /* Data User.swift in Sources */,
+				CEF56D9F2773B29D00A881E4 /* InfoViewController.swift in Sources */,
 				CEFB93AD276A92370017A96E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T59UNF3D6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SegueToView/Info.plist;
+				INFOPLIST_FILE = SegueToView/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -351,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T59UNF3D6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SegueToView/Info.plist;
+				INFOPLIST_FILE = SegueToView/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
