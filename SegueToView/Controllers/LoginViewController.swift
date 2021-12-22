@@ -3,7 +3,11 @@
 //  SegueToView
 //
 //  Created by user on 16.12.2021.
-//
+
+
+// На InfoViewController хотел передать имя
+// на ImageViewController передать фото из папки assest, запутался и не смог разобраться как
+
 
 import UIKit
 
@@ -18,7 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         guard let tabBarControllers = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarControllers.viewControllers else { return }
         let welcomeVC = segue.destination as? WelcomeViewController
-        welcomeVC?.login = loginTF.text // не смог понять почему не передается логин
+        welcomeVC?.login = loginTF.text // не смог понять почему не передается логин на WelcomeViewController
         guard let imageVC = segue.destination as? ImageViewController else { return }
         imageVC.ImageLabel = user.person.image
         
