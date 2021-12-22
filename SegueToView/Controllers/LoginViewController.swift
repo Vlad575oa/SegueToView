@@ -14,9 +14,9 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-
+    
     let user = User.getUserData()
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarControllers = segue.destination as? UITabBarController else { return }
@@ -34,7 +34,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-   
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
